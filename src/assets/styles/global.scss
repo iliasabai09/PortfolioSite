@@ -1,0 +1,18 @@
+@import "variables";
+@import "themes";
+@import "utils";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
