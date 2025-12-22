@@ -12,7 +12,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="card">
+  <div class="card" v-reveal-on-scroll>
     <img src="/icons/review.svg" alt="">
     <p>{{ card.text }}</p>
     <Rating :default-value="card.rating" class="card-rating"/>
