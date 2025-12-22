@@ -1,6 +1,8 @@
 @import "variables";
 @import "themes";
 @import "utils";
+@import "typography";
+@import "primevue";
 
 * {
   margin: 0;
@@ -11,8 +13,14 @@
   font-optical-sizing: auto;
 }
 
+body {
+  background-color: #e8e8e8;
+  //background-image: url("https://img.freepik.com/premium-vector/glitter-particles-background-effect-luxury-greeting-rich-card_97886-107.jpg?semt=ais_hybrid&w=740&q=80");
+}
+
 
 .container {
-  max-width: 1400px;
+  max-width: 1000px;
   margin: 0 auto;
+  background-color: #fff;
 }
