@@ -1,30 +1,33 @@
 <script setup lang="ts">
-
-import ContactInformation from "./components/contact-information.vue";
-import ContactForm from "./components/ContactForm.vue";
+import ContactInformation from './components/contact-information.vue'
+import ContactForm from './components/ContactForm.vue'
 </script>
 
 <template>
-  <div class="contact">
-    <h4 class="contact-title">Get In Touch</h4>
-    <p class="contact-subtitle">I'm always open to discussing new projects, creative ideas, or opportunities to be part
-      of your vision.</p>
-    <div class="contact-blocks">
-      <ContactInformation/>
-      <ContactForm/>
+  <section class="contact">
+    <h4 class="contact__title">Get In Touch</h4>
+
+    <p class="contact__subtitle">
+      I'm always open to discussing new projects, creative ideas, or opportunities
+      to be part of your vision.
+    </p>
+
+    <div class="contact__content">
+      <ContactInformation />
+      <ContactForm />
     </div>
-  </div>
+  </section>
 </template>
 
 <style scoped lang="scss">
 .contact {
-  &-title {
+  &__title {
     color: oklch(.21 .034 264.665);
     text-align: center;
     margin-bottom: 16px;
   }
 
-  &-subtitle {
+  &__subtitle {
     text-align: center;
     color: oklch(.446 .03 256.802);
     max-width: 600px;
@@ -32,9 +35,10 @@ import ContactForm from "./components/ContactForm.vue";
     font-size: 14px;
   }
 
-  &-blocks {
+  &__content {
     display: flex;
     justify-content: space-between;
+    gap: 48px;
   }
 }
 </style>
