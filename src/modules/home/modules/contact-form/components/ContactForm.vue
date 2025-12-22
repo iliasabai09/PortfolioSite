@@ -4,6 +4,7 @@ import InputText from 'primevue/inputtext'
 import Textarea from 'primevue/textarea'
 import Button from 'primevue/button'
 import type {IPayloadForm} from "../interfaces";
+import {sendForm} from "../http";
 
 const form = ref<IPayloadForm>({
   username: '',
@@ -14,6 +15,17 @@ const form = ref<IPayloadForm>({
 const isDisabled = computed(() =>
     Object.values(form.value).some((v) => !String(v).trim())
 )
+
+function send() {
+  sendForm(form.value).then((data) => {
+    console.log(data);
+    form.value = {
+      username: '',
+      email: '',
+      message: '',
+    }
+  })
+}
 </script>
 
 <template>
@@ -55,6 +67,7 @@ const isDisabled = computed(() =>
         iconPos="right"
         :disabled="isDisabled"
         class="contact-form__submit"
+        @click="send()"
     />
   </form>
 </template>

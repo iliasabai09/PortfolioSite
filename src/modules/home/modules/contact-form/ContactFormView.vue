@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ContactInformation from './components/contact-information.vue'
+import ContactInformation from './components/ContactInformation.vue'
 import ContactForm from './components/ContactForm.vue'
 </script>
 
