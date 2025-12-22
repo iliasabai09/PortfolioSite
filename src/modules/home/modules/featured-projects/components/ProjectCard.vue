@@ -30,17 +30,17 @@ defineProps({
   max-width: 300px;
   border-radius: 16px;
   overflow: hidden;
-  -webkit-box-shadow: 0px 0px 21px 7px rgba(34, 60, 80, 0.2);
-  -moz-box-shadow: 0px 0px 21px 7px rgba(34, 60, 80, 0.2);
-  box-shadow: 0px 0px 21px 7px rgba(34, 60, 80, 0.2);
+  -webkit-box-shadow: var(--shadow-card);
+  -moz-box-shadow: var(--shadow-card);
+  box-shadow: var(--shadow-card);
   cursor: pointer;
   transition: .8s ease;
 
   &:hover {
     transition: .8s ease;
-    -webkit-box-shadow: 0px 0px 18px 13px rgba(34, 60, 80, 0.2);
-    -moz-box-shadow: 0px 0px 18px 13px rgba(34, 60, 80, 0.2);
-    box-shadow: 0px 0px 18px 13px rgba(34, 60, 80, 0.2);
+    -webkit-box-shadow: var(--shadow-card-hover);
+    -moz-box-shadow: var(--shadow-card-hover);
+    box-shadow: var(--shadow-card-hover);
   }
 
   &-content {
@@ -61,7 +61,7 @@ defineProps({
   &-text {
     font-size: 14px;
     font-style: italic;
-    color: grey;
+    color: var(--color-muted);
     margin-bottom: 12px;
   }
 
@@ -69,7 +69,7 @@ defineProps({
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    color: grey;
+    color: var(--color-muted);
   }
 }
 </style>

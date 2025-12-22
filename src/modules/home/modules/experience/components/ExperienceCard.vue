@@ -26,7 +26,7 @@ defineProps({
 <style scoped lang="scss">
 .card {
   border-radius: 12px;
-  border: solid 2px oklch(0.93 0.01 2.1);
+  border: solid 2px var(--color-border);
   padding: 16px;
 
   &-skills {
@@ -56,7 +56,7 @@ defineProps({
 
   p {
     font-size: 14px;
-    color: #606060;
+    color: var(--color-muted);
   }
 }
 </style>

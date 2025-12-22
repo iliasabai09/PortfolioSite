@@ -35,7 +35,7 @@ defineProps({
 
   padding: 12px;
   border-radius: 12px;
-  border: solid 2px oklch(0.93 0.01 2.1);
+  border: solid 2px var(--color-border);
 
   &-rating {
     margin-bottom: 16px;
@@ -44,7 +44,7 @@ defineProps({
   p {
     margin-bottom: 24px;
     font-style: italic;
-    color: oklch(.446 .03 256.802);
+    color: var(--color-muted);
     font-size: 14px;
   }
 
@@ -63,7 +63,7 @@ defineProps({
       }
 
       &-position {
-        color: grey;
+        color: var(--color-muted);
         font-size: 12px;
       }
     }

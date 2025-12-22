@@ -62,7 +62,7 @@ const location = 'San Francisco, CA'
     width: 40px;
     height: 40px;
     border-radius: 8px;
-    background-image: linear-gradient(to bottom right, #3b82f6, #9333ea);
+    background-image: var(--gradient-secondary);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -81,7 +81,7 @@ const location = 'San Francisco, CA'
   }
 
   &__title {
-    color: #6b6b6b;
+    color: var(--color-muted);
     font-weight: 600;
   }
 

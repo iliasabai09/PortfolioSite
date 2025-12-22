@@ -16,7 +16,7 @@
   }
   &-text {
     text-align: center;
-    color: gray;
+    color: var(--color-muted);
   }
 }
 </style>

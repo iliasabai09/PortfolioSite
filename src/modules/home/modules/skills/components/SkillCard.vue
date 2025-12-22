@@ -27,11 +27,11 @@ defineProps({
 .card {
   padding: 24px;
   border-radius: 12px;
-  border: solid 2px oklch(0.93 0.01 2.1);
+  border: solid 2px var(--color-border);
   max-width: 305px;
 
   h4 {
-    color: oklch(.21 .034 264.665);
+    color: var(--color-text);
     font-weight: 500;
   }
 
@@ -39,11 +39,7 @@ defineProps({
     width: 40px;
     height: 40px;
     border-radius: 8px;
-    background-image: linear-gradient(
-            to bottom right,
-            #3b82f6,
-            #9333ea
-    );
+    background-image: var(--gradient-secondary);
     display: flex;
     flex-direction: column;
     justify-content: center;
