@@ -36,5 +36,25 @@ import {SKILLS} from "./constants";
     gap: 24px;
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+
+  @media (max-width: 900px) {
+    &-cards {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 30px;
+    }
+
+    p {
+      margin-bottom: 24px;
+    }
+
+    &-cards {
+      grid-template-columns: 1fr;
+    }
+  }
 }
 </style>

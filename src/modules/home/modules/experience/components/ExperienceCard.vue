@@ -32,6 +32,7 @@ defineProps({
   &-skills {
     display: flex;
     gap: 16px;
+    flex-wrap: wrap;
   }
 
   &-description {
@@ -57,6 +58,10 @@ defineProps({
   p {
     font-size: 14px;
     color: #606060;
+  }
+
+  @media (max-width: 768px) {
+    padding: 12px;
   }
 }
 </style>

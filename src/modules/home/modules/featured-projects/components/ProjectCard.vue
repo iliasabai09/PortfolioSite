@@ -28,6 +28,7 @@ defineProps({
 <style scoped lang="scss">
 .card {
   max-width: 300px;
+  width: 100%;
   border-radius: 16px;
   overflow: hidden;
   -webkit-box-shadow: 0px 0px 21px 7px rgba(34, 60, 80, 0.2);
@@ -50,6 +51,7 @@ defineProps({
   &-img {
     width: 100%;
     height: 180px;
+    object-fit: cover;
   }
 
   &-title {
@@ -70,6 +72,14 @@ defineProps({
     flex-wrap: wrap;
     gap: 8px;
     color: grey;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+
+    &-img {
+      height: 160px;
+    }
   }
 }
 </style>

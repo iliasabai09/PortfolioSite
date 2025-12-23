@@ -16,5 +16,12 @@ import UiHeaderIInfoBlock from "./components/UiHeaderIInfoBlock.vue";
   display: flex;
   gap: 44px;
   justify-content: space-between;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+  }
 }
 </style>

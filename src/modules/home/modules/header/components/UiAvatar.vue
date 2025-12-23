@@ -18,5 +18,11 @@
     text-align: center;
     color: gray;
   }
+
+  @media (max-width: 768px) {
+    &-img {
+      width: 140px;
+    }
+  }
 }
 </style>

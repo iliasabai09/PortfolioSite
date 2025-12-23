@@ -10,15 +10,15 @@ import ContactFormView from "../modules/contact-form/ContactFormView.vue";
 <template>
   <div class="home">
     <HeaderView/>
-    <img src="/icons/arrow-down.gif" alt="arrow" width="50">
+    <img class="home-arrow" src="/icons/arrow-down.gif" alt="arrow" width="50">
     <FeaturedProjectsView/>
-    <img src="/icons/arrow-down.gif" alt="arrow" width="50">
+    <img class="home-arrow" src="/icons/arrow-down.gif" alt="arrow" width="50">
     <SkillsView/>
-    <img src="/icons/arrow-down.gif" alt="arrow" width="50">
+    <img class="home-arrow" src="/icons/arrow-down.gif" alt="arrow" width="50">
     <ExperienceView/>
-    <img src="/icons/arrow-down.gif" alt="arrow" width="50">
+    <img class="home-arrow" src="/icons/arrow-down.gif" alt="arrow" width="50">
     <ReviewsView/>
-    <img src="/icons/arrow-down.gif" alt="arrow" width="50">
+    <img class="home-arrow" src="/icons/arrow-down.gif" alt="arrow" width="50">
     <ContactFormView/>
   </div>
 </template>
@@ -29,8 +29,17 @@ import ContactFormView from "../modules/contact-form/ContactFormView.vue";
   flex-direction: column;
   gap: 56px;
   padding: 24px;
-  img {
+  &-arrow {
     margin: 0 auto;
+  }
+
+  @media (max-width: 768px) {
+    gap: 36px;
+    padding: 16px;
+
+    &-arrow {
+      width: 36px;
+    }
   }
 }
 </style>

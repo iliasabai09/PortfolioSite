@@ -63,5 +63,25 @@ import Button from 'primevue/button';
     display: flex;
     gap: 16px;
   }
+
+  @media (max-width: 768px) {
+    align-items: center;
+    text-align: center;
+
+    h1 {
+      font-size: 28px;
+    }
+
+    &-socials {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    &-actions {
+      width: 100%;
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
 }
 </style>

@@ -23,6 +23,13 @@ body {
   max-width: 1000px;
   margin: 0 auto;
   background-color: #fff;
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .container {
+    max-width: 100%;
+  }
 }
 
 .reveal-on-scroll {

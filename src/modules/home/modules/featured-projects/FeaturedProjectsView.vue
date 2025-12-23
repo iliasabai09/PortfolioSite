@@ -33,7 +33,24 @@ import {PROJECTS} from "./constants";
 
   &-cards {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 30px;
+    }
+
+    p {
+      margin-bottom: 24px;
+    }
+
+    &-cards {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 }
 </style>
