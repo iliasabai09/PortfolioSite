@@ -2,7 +2,6 @@
 import {ref} from "vue";
 import Rating from 'primevue/rating';
 import Avatar from 'primevue/avatar';
-const value = ref(5);
 defineProps({
   card: {
     type: Object,
