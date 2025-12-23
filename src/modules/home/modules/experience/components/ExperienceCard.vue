@@ -10,7 +10,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="card">
+  <div class="card" v-reveal-on-scroll>
     <h3>{{ card.title }}</h3>
     <div class="card-company">
       <i class="pi pi-briefcase"></i>

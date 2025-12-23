@@ -10,7 +10,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="card">
+  <div class="card" v-reveal-on-scroll>
     <div class="card-header">
       <div class="card-iconWrapper">
         <img :src="'/icons/' + skill.icon" alt="frontend" width="24">
