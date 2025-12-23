@@ -40,5 +40,20 @@ import ContactForm from './components/ContactForm.vue'
     justify-content: space-between;
     gap: 48px;
   }
+
+  @media (max-width: 768px) {
+    &__title {
+      font-size: 30px;
+    }
+
+    &__subtitle {
+      margin-bottom: 32px;
+    }
+
+    &__content {
+      flex-direction: column;
+      gap: 24px;
+    }
+  }
 }
 </style>

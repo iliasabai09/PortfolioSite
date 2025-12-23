@@ -29,6 +29,7 @@ defineProps({
 
 <style scoped lang="scss">
 .card {
+  width: 100%;
   img {
     margin-bottom: 16px;
   }
@@ -67,6 +68,10 @@ defineProps({
         font-size: 12px;
       }
     }
+  }
+
+  @media (max-width: 768px) {
+    padding: 16px;
   }
 }
 </style>

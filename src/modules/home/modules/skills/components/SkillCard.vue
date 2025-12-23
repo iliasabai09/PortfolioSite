@@ -29,6 +29,7 @@ defineProps({
   border-radius: 12px;
   border: solid 2px oklch(0.93 0.01 2.1);
   max-width: 305px;
+  width: 100%;
 
   h4 {
     color: oklch(.21 .034 264.665);
@@ -61,6 +62,10 @@ defineProps({
     display: flex;
     flex-wrap: wrap;
     gap: 4px;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 100%;
   }
 }
 </style>

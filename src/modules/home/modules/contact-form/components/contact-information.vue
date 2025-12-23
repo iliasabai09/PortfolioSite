@@ -93,5 +93,11 @@ const location = 'San Francisco, CA'
       text-decoration: underline;
     }
   }
+
+  @media (max-width: 768px) {
+    &__list {
+      gap: 20px;
+    }
+  }
 }
 </style>

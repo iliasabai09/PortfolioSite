@@ -36,5 +36,15 @@ import {EXPERIENCE_LIST} from "./constants";
     flex-direction: column;
     gap: 16px;
   }
+
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 30px;
+    }
+
+    p {
+      margin-bottom: 24px;
+    }
+  }
 }
 </style>
