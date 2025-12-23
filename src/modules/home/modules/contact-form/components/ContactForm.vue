@@ -87,7 +87,7 @@ function sendForm() {
 
   &__label {
     font-size: 12px;
-    color: #424242;
+    color: var(--color-muted-strong);
   }
 
   &__control {

@@ -28,7 +28,7 @@ import {REVIEWS} from "./constants";
     max-width: 500px;
     margin: 0 auto 32px;
     line-height: 1.4rem;
-    color: gray;
+    color: var(--color-muted);
   }
 
   &-cards {

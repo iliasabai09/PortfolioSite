@@ -1,0 +1,14 @@
+:root {
+  --color-page: #e8e8e8;
+  --color-surface: #ffffff;
+  --color-text: #0b1020;
+  --color-subtle: #363636;
+  --color-muted: #6b6b6b;
+  --color-muted-strong: #424242;
+  --color-border: oklch(0.93 0.01 2.1);
+  --color-chip-bg: #e5e5e5;
+  --shadow-card: 0px 0px 21px 7px rgba(34, 60, 80, 0.2);
+  --shadow-card-hover: 0px 0px 18px 13px rgba(34, 60, 80, 0.2);
+  --gradient-primary: linear-gradient(90deg, #3b82f6 0%, #7c6cff 100%);
+  --gradient-secondary: linear-gradient(to bottom right, #3b82f6, #9333ea);
+}

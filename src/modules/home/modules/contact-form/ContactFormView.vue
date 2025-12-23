@@ -22,14 +22,14 @@ import ContactForm from './components/ContactForm.vue'
 <style scoped lang="scss">
 .contact {
   &__title {
-    color: oklch(.21 .034 264.665);
+    color: var(--color-text);
     text-align: center;
     margin-bottom: 16px;
   }
 
   &__subtitle {
     text-align: center;
-    color: oklch(.446 .03 256.802);
+    color: var(--color-muted);
     max-width: 600px;
     margin: 0 auto 48px;
     font-size: 14px;

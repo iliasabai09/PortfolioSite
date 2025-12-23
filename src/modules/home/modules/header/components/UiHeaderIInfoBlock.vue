@@ -1,5 +1,28 @@
 <script setup lang="ts">
+import {onMounted, ref, watch} from 'vue';
 import Button from 'primevue/button';
+
+const isDark = ref(false);
+const themeStorageKey = 'theme';
+
+const applyTheme = (value: boolean) => {
+  document.documentElement.setAttribute('data-theme', value ? 'dark' : 'light');
+};
+
+onMounted(() => {
+  const saved = localStorage.getItem(themeStorageKey);
+  if (saved) {
+    isDark.value = saved === 'dark';
+  } else {
+    isDark.value = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  }
+  applyTheme(isDark.value);
+});
+
+watch(isDark, (value) => {
+  localStorage.setItem(themeStorageKey, value ? 'dark' : 'light');
+  applyTheme(value);
+});
 </script>
 
 <template>
@@ -14,6 +37,14 @@ import Button from 'primevue/button';
       <Button icon="pi pi-github" severity="secondary" rounded aria-label="github"></Button>
       <Button icon="pi pi-linkedin" severity="secondary" rounded aria-label="linkedin"></Button>
       <Button icon="pi pi-envelope" severity="secondary" rounded aria-label="envelope"></Button>
+    </div>
+    <div class="info-theme">
+      <Button
+        :icon="isDark ? 'pi pi-sun' : 'pi pi-moon'"
+        :label="isDark ? 'Светлая тема' : 'Темная тема'"
+        severity="secondary"
+        @click="isDark = !isDark"
+      />
     </div>
     <div class="info-actions">
       <Button label="Скачать резюме" icon="pi pi-download" iconPos="right"/>
@@ -31,7 +62,7 @@ import Button from 'primevue/button';
   gap: 16px;
 
   &-subtitle {
-    color: gray;
+    color: var(--color-muted);
     font-weight: bold;
   }
 
@@ -39,16 +70,16 @@ import Button from 'primevue/button';
     font-size: 40px;
     line-height: 1.05;
     font-weight: 700;
-    color: #0b1020;
+    color: var(--color-text);
   }
 
   p {
     font-style: italic;
-    color: #363636;
+    color: var(--color-subtle);
   }
 
   &-name {
-    background: linear-gradient(90deg, #3b82f6 0%, #7c6cff 100%);
+    background: var(--gradient-primary);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -62,6 +93,10 @@ import Button from 'primevue/button';
   &-actions {
     display: flex;
     gap: 16px;
+  }
+
+  &-theme {
+    display: flex;
   }
 }
 </style>

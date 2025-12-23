@@ -14,15 +14,18 @@
 }
 
 body {
-  background-color: #e8e8e8;
+  background-color: var(--color-page);
+  color: var(--color-text);
   //background-image: url("https://img.freepik.com/premium-vector/glitter-particles-background-effect-luxury-greeting-rich-card_97886-107.jpg?semt=ais_hybrid&w=740&q=80");
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 
 .container {
   max-width: 1000px;
   margin: 0 auto;
-  background-color: #fff;
+  background-color: var(--color-surface);
+  transition: background-color 0.3s ease;
 }
 
 .reveal-on-scroll {
