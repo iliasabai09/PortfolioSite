@@ -10,23 +10,32 @@ defineProps({
 </script>
 
 <template>
-  <div class="card" v-reveal-on-scroll>
-    <img
-        class="card-img"
-        :src="project.img"
-        alt="">
-    <div class="card-content">
-      <h4 class="card-title">{{ project.title }}</h4>
-      <p class="card-text">{{ project.description }}</p>
-      <div class="card-specs">
-        <Chip v-for="s in project.stack" :label="s"/>
+  <a :href="project.link" target="_blank">
+    <div class="card" v-reveal-on-scroll>
+      <img
+          class="card-img"
+          :src="project.img"
+          alt="">
+      <div class="card-content">
+        <h4 class="card-title">{{ project.title }}</h4>
+        <p class="card-text">{{ project.description }}</p>
+        <div class="card-specs">
+          <Chip v-for="s in project.stack" :label="s"/>
+        </div>
       </div>
     </div>
-  </div>
+  </a>
 </template>
 
 <style scoped lang="scss">
+a {
+  text-decoration: none;
+  text-transform: none;
+  color: var(--gray);
+}
+
 .card {
+  height: 100%;
   max-width: 300px;
   width: 100%;
   border-radius: 16px;
@@ -58,6 +67,7 @@ defineProps({
     font-size: 18px;
     font-weight: 500;
     margin-bottom: 16px;
+    color: var(--gray);
   }
 
   &-text {

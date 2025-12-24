@@ -2,7 +2,7 @@
 const email = 'iliasabaimain@gmail.com'
 const phoneRaw = '+77009965396'
 const phoneView = '+7 (700) 996-53-96'
-const location = 'San Francisco, CA'
+const location = 'Kazakhstan, Almaty'
 </script>
 
 <template>
