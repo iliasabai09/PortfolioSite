@@ -1,14 +1,16 @@
 <script setup lang="ts">
 import Button from 'primevue/button';
+import {useI18n} from '../../../../i18n'
+
+const {t} = useI18n()
 </script>
 
 <template>
   <div class="info">
-    <h1>Привет, я <span class="info-name">Абай Илияс</span></h1>
-    <div class="info-subtitle headline-6">Expert developer</div>
+    <h1>{{ t.header.greeting }} <span class="info-name">Абай Илияс</span></h1>
+    <div class="info-subtitle headline-6">{{ t.header.subtitle }}</div>
     <p class="headline-8">
-      Passionate full-stack developer crafting beautiful and functional web experiences. I turn ideas into elegant
-      solutions using modern technologies.
+      {{ t.header.description }}
     </p>
     <div class="info-socials">
       <a href="https://github.com/iliasabai09" target="_blank">
@@ -23,10 +25,10 @@ import Button from 'primevue/button';
     </div>
     <div class="info-actions">
       <a href="/docs/resume.pdf" download="">
-        <Button label="Скачать резюме" icon="pi pi-download" iconPos="right"/>
+        <Button :label="t.header.resume" icon="pi pi-download" iconPos="right"/>
       </a>
       <a href="tel:+77009965396">
-        <Button label="Связатся" icon="pi pi-phone" severity="secondary"/>
+        <Button :label="t.header.contact" icon="pi pi-phone" severity="secondary"/>
       </a>
     </div>
   </div>

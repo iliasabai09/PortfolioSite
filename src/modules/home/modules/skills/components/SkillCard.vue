@@ -13,7 +13,7 @@ defineProps({
   <div class="card" v-reveal-on-scroll>
     <div class="card-header">
       <div class="card-iconWrapper">
-        <img :src="'/icons/' + skill.icon" alt="frontend" width="24">
+        <img :src="'/icons/' + skill.icon" :alt="skill.title" width="24">
       </div>
       <h4>{{ skill.title }}</h4>
     </div>

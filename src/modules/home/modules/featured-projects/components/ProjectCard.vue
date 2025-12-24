@@ -15,7 +15,7 @@ defineProps({
       <img
           class="card-img"
           :src="project.img"
-          alt="">
+          :alt="project.title">
       <div class="card-content">
         <h4 class="card-title">{{ project.title }}</h4>
         <p class="card-text">{{ project.description }}</p>

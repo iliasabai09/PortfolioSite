@@ -1,15 +1,17 @@
 <script setup lang="ts">
 import ContactInformation from './components/contact-information.vue'
 import ContactForm from './components/ContactForm.vue'
+import {useI18n} from '../../../i18n'
+
+const {t} = useI18n()
 </script>
 
 <template>
   <section class="contact">
-    <h4 class="contact__title">Get In Touch</h4>
+    <h4 class="contact__title">{{ t.contact.title }}</h4>
 
     <p class="contact__subtitle">
-      I'm always open to discussing new projects, creative ideas, or opportunities
-      to be part of your vision.
+      {{ t.contact.subtitle }}
     </p>
 
     <div class="contact__content">

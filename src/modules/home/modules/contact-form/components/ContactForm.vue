@@ -5,6 +5,9 @@ import Textarea from 'primevue/textarea'
 import Button from 'primevue/button'
 import type {IPayloadForm} from "../interfaces";
 import {sendToTelegramDirect} from "../api";
+import {useI18n} from '../../../../i18n'
+
+const {t} = useI18n()
 
 const form = ref<IPayloadForm>({
   username: '',
@@ -31,7 +34,7 @@ function sendForm() {
 <template>
   <form class="contact-form">
     <div class="contact-form__field">
-      <label for="username" class="contact-form__label">Username</label>
+      <label for="username" class="contact-form__label">{{ t.contact.form.username }}</label>
       <InputText
           id="username"
           v-model="form.username"
@@ -41,7 +44,7 @@ function sendForm() {
     </div>
 
     <div class="contact-form__field">
-      <label for="email" class="contact-form__label">Email</label>
+      <label for="email" class="contact-form__label">{{ t.contact.form.email }}</label>
       <InputText
           type="email"
           id="email"
@@ -52,7 +55,7 @@ function sendForm() {
     </div>
 
     <div class="contact-form__field">
-      <label for="message" class="contact-form__label">Message</label>
+      <label for="message" class="contact-form__label">{{ t.contact.form.message }}</label>
       <Textarea
           id="message"
           v-model="form.message"
@@ -62,7 +65,7 @@ function sendForm() {
     </div>
 
     <Button
-        label="Send Message"
+        :label="t.contact.form.submit"
         icon="pi pi-send"
         iconPos="right"
         :disabled="isDisabled"

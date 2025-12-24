@@ -1,14 +1,19 @@
 <script setup lang="ts">
+import {computed} from 'vue'
 import SkillCard from "./components/SkillCard.vue";
-import {SKILLS} from "./constants";
+import {localizedContent, useI18n} from '../../../i18n'
+
+const {lang, t} = useI18n()
+
+const skills = computed(() => localizedContent.skills[lang.value])
 </script>
 
 <template>
   <div class="skills">
-    <h2>Skills & Expertise</h2>
-    <p>I work with a wide range of modern technologies and tools to build scalable and efficient applications.</p>
+    <h2>{{ t.skills.title }}</h2>
+    <p>{{ t.skills.subtitle }}</p>
     <div class="skills-cards">
-      <SkillCard v-for="s in SKILLS" :skill="s"/>
+      <SkillCard v-for="s in skills" :skill="s"/>
     </div>
   </div>
 </template>
