@@ -1,17 +1,21 @@
 <script setup lang="ts">
 import Rating from 'primevue/rating';
 import Avatar from 'primevue/avatar';
+import {useI18n} from '../../../../i18n'
+
 defineProps({
   card: {
     type: Object,
     required: true,
   }
 })
+
+const {t} = useI18n()
 </script>
 
 <template>
   <div class="card" v-reveal-on-scroll>
-    <img src="/icons/review.svg" alt="">
+    <img src="/icons/review.svg" :alt="t.reviews.iconAlt">
     <p>{{ card.text }}</p>
     <Rating :default-value="card.rating" class="card-rating"/>
     <div class="card-user">

@@ -1,15 +1,19 @@
 <script setup lang="ts">
+import {computed} from 'vue'
 import ExperienceCard from "./components/ExperienceCard.vue";
-import {EXPERIENCE_LIST} from "./constants";
+import {localizedContent, useI18n} from '../../../i18n'
 
+const {lang, t} = useI18n()
+
+const experienceList = computed(() => localizedContent.experience[lang.value])
 </script>
 
 <template>
   <div class="experience">
-    <h2>Experience</h2>
-    <p>Мой профессиональный путь и опыт работы в различных компаниях.</p>
+    <h2>{{ t.experience.title }}</h2>
+    <p>{{ t.experience.subtitle }}</p>
     <div class="experience-cards">
-      <ExperienceCard v-for="c in EXPERIENCE_LIST" :card="c"/>
+      <ExperienceCard v-for="c in experienceList" :card="c"/>
     </div>
   </div>
 </template>

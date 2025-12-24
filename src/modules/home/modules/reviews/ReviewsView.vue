@@ -1,15 +1,19 @@
 <script setup lang="ts">
-
+import {computed} from 'vue'
 import ReviewCart from "./components/ReviewCart.vue";
-import {REVIEWS} from "./constants";
+import {localizedContent, useI18n} from '../../../i18n'
+
+const {lang, t} = useI18n()
+
+const reviews = computed(() => localizedContent.reviews[lang.value])
 </script>
 
 <template>
   <div class="reviews">
-    <h2>Отзывы Клиентов</h2>
-    <p>Что говорят обо мне клиенты и коллеги, с которыми я работал.</p>
+    <h2>{{ t.reviews.title }}</h2>
+    <p>{{ t.reviews.subtitle }}</p>
     <div class="reviews-cards">
-      <ReviewCart v-for="r in REVIEWS" :card="r"/>
+      <ReviewCart v-for="r in reviews" :card="r"/>
     </div>
   </div>
 </template>

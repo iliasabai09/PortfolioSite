@@ -1,8 +1,13 @@
 <script setup lang="ts">
+import {computed} from 'vue'
+import {localizedContent, useI18n} from '../../../../i18n'
+
+const {lang, t} = useI18n()
+
 const email = 'iliasabaimain@gmail.com'
 const phoneRaw = '+77009965396'
 const phoneView = '+7 (700) 996-53-96'
-const location = 'Kazakhstan, Almaty'
+const location = computed(() => localizedContent.contactInfo[lang.value].location)
 </script>
 
 <template>
@@ -10,33 +15,33 @@ const location = 'Kazakhstan, Almaty'
     <div class="contact-info__list">
       <div class="contact-info__item">
         <div class="contact-info__icon">
-          <img class="contact-info__icon-img" src="/icons/email.svg" alt="Email" width="24" height="24">
+          <img class="contact-info__icon-img" src="/icons/email.svg" :alt="t.contact.info.email" width="24" height="24">
         </div>
 
         <div class="contact-info__content">
-          <div class="contact-info__title">Email</div>
+          <div class="contact-info__title">{{ t.contact.info.email }}</div>
           <a class="contact-info__value" :href="`mailto:${email}`">{{ email }}</a>
         </div>
       </div>
 
       <div class="contact-info__item">
         <div class="contact-info__icon">
-          <img class="contact-info__icon-img" src="/icons/phone.svg" alt="Phone" width="24" height="24">
+          <img class="contact-info__icon-img" src="/icons/phone.svg" :alt="t.contact.info.phone" width="24" height="24">
         </div>
 
         <div class="contact-info__content">
-          <div class="contact-info__title">Phone</div>
+          <div class="contact-info__title">{{ t.contact.info.phone }}</div>
           <a class="contact-info__value" :href="`tel:${phoneRaw}`">{{ phoneView }}</a>
         </div>
       </div>
 
       <div class="contact-info__item">
         <div class="contact-info__icon">
-          <img class="contact-info__icon-img" src="/icons/location.svg" alt="Location" width="24" height="24">
+          <img class="contact-info__icon-img" src="/icons/location.svg" :alt="t.contact.info.location" width="24" height="24">
         </div>
 
         <div class="contact-info__content">
-          <div class="contact-info__title">Location</div>
+          <div class="contact-info__title">{{ t.contact.info.location }}</div>
           <p class="contact-info__value">{{ location }}</p>
         </div>
       </div>

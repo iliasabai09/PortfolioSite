@@ -5,20 +5,23 @@ import SkillsView from "../modules/skills/SkillsView.vue";
 import ExperienceView from "../modules/experience/ExperienceView.vue";
 import ReviewsView from "../modules/reviews/ReviewsView.vue";
 import ContactFormView from "../modules/contact-form/ContactFormView.vue";
+import {useI18n} from '../../i18n'
+
+const {t} = useI18n()
 </script>
 
 <template>
   <div class="home">
     <HeaderView/>
-    <img class="home-arrow" src="/icons/arrow-down.gif" alt="arrow" width="50">
+    <img class="home-arrow" src="/icons/arrow-down.gif" :alt="t.common.arrowAlt" width="50">
     <FeaturedProjectsView/>
-    <img class="home-arrow" src="/icons/arrow-down.gif" alt="arrow" width="50">
+    <img class="home-arrow" src="/icons/arrow-down.gif" :alt="t.common.arrowAlt" width="50">
     <SkillsView/>
-    <img class="home-arrow" src="/icons/arrow-down.gif" alt="arrow" width="50">
+    <img class="home-arrow" src="/icons/arrow-down.gif" :alt="t.common.arrowAlt" width="50">
     <ExperienceView/>
-    <img class="home-arrow" src="/icons/arrow-down.gif" alt="arrow" width="50">
+    <img class="home-arrow" src="/icons/arrow-down.gif" :alt="t.common.arrowAlt" width="50">
     <ReviewsView/>
-    <img class="home-arrow" src="/icons/arrow-down.gif" alt="arrow" width="50">
+    <img class="home-arrow" src="/icons/arrow-down.gif" :alt="t.common.arrowAlt" width="50">
     <ContactFormView/>
   </div>
 </template>

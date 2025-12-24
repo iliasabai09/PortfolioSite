@@ -1,15 +1,19 @@
 <script setup lang="ts">
-
+import {computed} from 'vue'
 import ProjectCard from "./components/ProjectCard.vue";
-import {PROJECTS} from "./constants";
+import {localizedContent, useI18n} from '../../../i18n'
+
+const {lang, t} = useI18n()
+
+const projects = computed(() => localizedContent.projects[lang.value])
 </script>
 
 <template>
   <div class="featured">
-    <h2>Featured Projects</h2>
-    <p>Here are some of my recent projects that showcase my skills and experience in web development.</p>
+    <h2>{{ t.featured.title }}</h2>
+    <p>{{ t.featured.subtitle }}</p>
     <div class="featured-cards">
-      <project-card v-for="p in PROJECTS" :project="p"/>
+      <project-card v-for="p in projects" :project="p"/>
     </div>
   </div>
 </template>
