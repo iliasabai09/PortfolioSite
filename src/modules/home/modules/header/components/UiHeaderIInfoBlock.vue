@@ -11,13 +11,23 @@ import Button from 'primevue/button';
       solutions using modern technologies.
     </p>
     <div class="info-socials">
-      <Button icon="pi pi-github" severity="secondary" rounded aria-label="github"></Button>
-      <Button icon="pi pi-linkedin" severity="secondary" rounded aria-label="linkedin"></Button>
-      <Button icon="pi pi-envelope" severity="secondary" rounded aria-label="envelope"></Button>
+      <a href="https://github.com/iliasabai09" target="_blank">
+        <Button icon="pi pi-github" severity="secondary" rounded aria-label="github"></Button>
+      </a>
+      <a href="https://www.linkedin.com/in/iliyas-abay-b1099b318/" target="_blank">
+        <Button icon="pi pi-linkedin" severity="secondary" rounded aria-label="linkedin"></Button>
+      </a>
+      <a href="mailto:iliasabaimain@gmail.com" target="_blank">
+        <Button icon="pi pi-envelope" severity="secondary" rounded aria-label="envelope"></Button>
+      </a>
     </div>
     <div class="info-actions">
-      <Button label="Скачать резюме" icon="pi pi-download" iconPos="right"/>
-      <Button label="Связатся" icon="pi pi-phone" severity="secondary"/>
+      <a href="/docs/resume.pdf" download="">
+        <Button label="Скачать резюме" icon="pi pi-download" iconPos="right"/>
+      </a>
+      <a href="tel:+77009965396">
+        <Button label="Связатся" icon="pi pi-phone" severity="secondary"/>
+      </a>
     </div>
   </div>
 </template>
