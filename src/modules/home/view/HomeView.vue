@@ -3,7 +3,6 @@ import HeaderView from "../modules/header/HeaderView.vue";
 import FeaturedProjectsView from "../modules/featured-projects/FeaturedProjectsView.vue";
 import SkillsView from "../modules/skills/SkillsView.vue";
 import ExperienceView from "../modules/experience/ExperienceView.vue";
-import ReviewsView from "../modules/reviews/ReviewsView.vue";
 import ContactFormView from "../modules/contact-form/ContactFormView.vue";
 import {useI18n} from '../../i18n'
 
