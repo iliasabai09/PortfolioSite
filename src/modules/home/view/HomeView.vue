@@ -19,8 +19,8 @@ const {t} = useI18n()
     <SkillsView/>
     <img class="home-arrow" src="/icons/arrow-down.gif" :alt="t.common.arrowAlt" width="50">
     <ExperienceView/>
-    <img class="home-arrow" src="/icons/arrow-down.gif" :alt="t.common.arrowAlt" width="50">
-    <ReviewsView/>
+<!--    <img class="home-arrow" src="/icons/arrow-down.gif" :alt="t.common.arrowAlt" width="50">-->
+<!--    <ReviewsView/>-->
     <img class="home-arrow" src="/icons/arrow-down.gif" :alt="t.common.arrowAlt" width="50">
     <ContactFormView/>
   </div>
